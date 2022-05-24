@@ -1,0 +1,49 @@
+$primary_color: red;
+$secondaty_color: black;
+$width_standard: 100%;
+$height_standard: 100%;
+
+.front {
+  background-color: $primary_color;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  min-width: 100vh;
+  min-height: 100vh;
+}
+
+.card {
+  position: relative;
+  width: $width_standard;
+  height: $height_standard;
+  text-align: center;
+  transition: 1s;
+  transform-style: preserve-3d;
+  border-radius: 3rem;
+}
+
+.box:hover > .card {
+  transform: rotateY(180deg);
+}
+.front,
+.back {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  width: $width_standard;
+  height: $height_standard;
+  font-size: 10rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 3rem;
+}
+
+.back {
+  background-color: $secondaty_color;
+  transform: rotateY(180deg);
+  color: white;
+}
